@@ -12,20 +12,50 @@ haspayments = {
     "Лол К.К. Р0000" : 1
 }
 
-print("BEFORE")
-
-print(*[i for i in haspayments if haspayments[i]], sep="\n")
-
 def checker() -> None:
-    studlist = [student for student in haspayments if re.search(r"[A-ZА-Я]\w+\s+(?:[A-ZА-Я]\.?\s*){2} Р3112", student)]
+    print("BEFORE")
+    print(*[i for i in haspayments if haspayments[i]], sep="\n")
+
+
+    studlist = [student for student in haspayments if re.search(r"[A-ZА-Я]\w+\s+(?:[A-ZА-Я]\.?\s*){2} [РP]3112", student)]
     
     for stud in studlist:
         a, b = re.findall(r"([А-ЯA-Z])\.?\s*([А-ЯA-Z])\.?\s*", stud)[0]
         if a == b: haspayments[stud] = 0
 
+    print("\nAFTER")
+    print(*[i for i in haspayments if haspayments[i]], sep="\n")
+
 
 checker()
 
-print("\nAFTER")
 
-print(*[i for i in haspayments if haspayments[i]], sep="\n")
+
+def test():
+    global haspayments
+
+    try:
+        w = int(input("\nВы хотите ввести свой тест? Введите количество участников теста или 0, если не хотите делать тест.\n"))
+    except:
+        print("Повторите попытку")
+        test()
+        return
+
+    print("Введите участников в формате Фамилия И. О. Г0...0")
+    haspayments = {}
+
+    def getter():
+        try:
+            name = re.findall(r"([A-ZА-Я]\w+\s+(?:[A-ZА-Я]\.?\s*){2}\s+[A-ZА-Я]\d+)", input())[0]
+            haspayments[name] = 1
+        except:
+            print("Соблюдайте формат. Попробуйте еще раз.")
+            getter()
+            return
+
+    for i in range(w):
+        getter()
+
+    checker()
+
+test()

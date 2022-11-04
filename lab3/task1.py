@@ -44,6 +44,19 @@ def check_matches(string: str) -> int:
     return len(re.findall(f"{smile}", string))
 
 def checker(string):
-    print(f"INPUT: {string}\nNUMBER OF SMILES: {check_matches(string)}")
+    print(f"\nINPUT: {string}\nNUMBER OF SMILES: {check_matches(string)}")
 
 for i in tests: checker(i)
+
+def test():
+    try:
+        w = int(input("\nВы хотите ввести свой тест? Введите 1 или 0.\n"))
+        if w not in (0,1): raise Exception
+    except:
+        print("Повторите попытку")
+        test()
+        return
+
+    return checker(input("Введите тест:\n")) if w else None
+
+test()
