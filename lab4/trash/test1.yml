@@ -1,0 +1,117 @@
+prefix: '&8[&eBuildBattle&8]&r '
+stats:
+  type: FLATFILE
+  async_save_player_data: false
+  create_stats_on_server_join: true
+mysql:
+  host: dbHost
+  port: 3306
+  username: dbUser
+  database: dbName
+  password: dbPass
+bungeecord:
+  use_bungee: false
+  fallback_servers:
+  - lobby1
+  auto_join_players: true
+  change_motd: false
+parties:
+  enabled: false
+  max_players: 5
+rewards:
+  give_after_game_ends: true
+  PointsAPI:
+    enabled: false
+    first_place: 50
+    second_place: 25
+    third_place: 10
+  Vault:
+    enabled: false
+    first_place: 50
+    second_place: 25
+    third_place: 10
+  Command:
+    enabled: true
+    first_place: mixadev givebox %player% 60
+    second_place: mixadev givebox %player% 40
+    third_place: mixadev givebox %player% 20
+auto-restart:
+  enabled: false
+  games-needed: 10
+  restart-command: stop
+arena:
+  lobbyTime: 30
+  defaultGameTime: 300
+  votingTime: 13
+  voting_for_themes:
+    enabled: false
+    themeVotingTime: 15
+    themesToVote: 5
+    super_votes_enabled: false
+  fair_vote:
+    enabled: true
+  endTime: 10
+  default_floor: WOOD:2
+  arena_chat: true
+  team_chat: true
+  announce_new_most_points: false
+  replace_block_behind_signs: true
+  show_game_scoreboard: true
+  show_main_lobby_scoreboard: false
+  enable_reports: false
+  show_vote_in_subtitle: true
+  automatic_grow: true
+  restrict_player_movement: true
+  restrict_only_player_Y_movement: false
+  remove_players_after_game: true
+  enable_clear_plot_option: true
+  end_commands: []
+  plot_options:
+    heads: false
+    change_floor: true
+    time: false
+    weather: false
+    biome_selector: true
+    banner_creator: true
+    particles: true
+    clear_plot: true
+  particles:
+    max_particles_per_player: 20
+    offset: 0.5
+    amount_to_spawn: 1
+    refresh_time: 0.5
+  win_fireworks:
+    firework_waves: 3
+    amount_per_corner: 5
+  allowed_commands:
+  - bb
+  - buildbattle
+  restriced_blocks:
+  - 7
+  - 10
+  - 11
+change_floor_npc:
+  type: VILLAGER
+teleport_to_main_lobby_on_join: false
+plugin_loading:
+  load_plugin_later: false
+  load_after: 10
+main_command:
+  name: buildbattle
+  description: Main BuildBattle command
+  aliases:
+  - bb
+  - bbpro
+  - buildbattlepro
+set_theme_command:
+  name: settheme
+  description: Settheme command for BuildBattle
+  aliases:
+  - themeset
+main_lobby:
+  world: mg_hub
+  x: 127.59290755297368
+  y: 101.0
+  z: 22.040991855836083
+  pitch: 8.067787E-5
+  yaw: -58.68089
