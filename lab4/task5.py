@@ -18,6 +18,11 @@ def yml_parser(file: str) -> None:
                     d[lkey] += [{}]
                 except:
                     print("Неправильный формат файла"); quit()
+
+                if ":" in s:
+                    key, *string = s[1:].strip().split(":")
+                    d[lkey][-1][key.strip()] = ":".join(string).strip()
+
             elif lkey:
                 key, *string = s.split(":")
                 try: d[lkey.strip()][-1][key] = ":".join(string).strip()

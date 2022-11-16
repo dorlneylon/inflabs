@@ -18,6 +18,9 @@ def yml_parser(file: str) -> None:
                     d[lkey] += [{}]
                 except:
                     print("Неправильный формат файла"); quit()
+                if re.match(r"^-.*:.*", s):
+                    key, *string = s[1:].strip().split(":")
+                    d[lkey][-1][key.strip()] = ":".join(string).strip()                 
             elif lkey:
                 key, *string = re.findall(r"^(\w*\s*):\s*(.*)", s)[0]
                 try: d[lkey.strip()][-1][key] = ":".join(string).strip()

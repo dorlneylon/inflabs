@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7a02b064-fe8a-4757-97a5-de9861aacc0f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../lab3/smile.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task1.py" beforeDir="false" afterPath="$PROJECT_DIR$/task1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,11 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/dorlnylon/itmo/inflabs/lab4"
+    "last_opened_file_path": "/home/dorlnylon/itmo/proglabs/lab3",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -38,6 +45,8 @@
       <option name="presentableId" value="Default" />
       <updated>1667902215283</updated>
       <workItem from="1667902217238" duration="11000" />
+      <workItem from="1668196216069" duration="212000" />
+      <workItem from="1668196464741" duration="34000" />
     </task>
     <servers />
   </component>
